@@ -1,0 +1,27 @@
+{
+  "producer_id": "demo",
+  "request_id": "demo-forgotten-1",
+  "session_id": "demo:session",
+  "external_session_id": "demo-conversation",
+  "messages": [
+    {
+      "id": "demo:message:2",
+      "external_message_id": "demo-turn-2",
+      "role": "user",
+      "content": "격리 수준은 배웠는데 기억이 안 나요.",
+      "observed_at": "2026-11-10T05:01:00Z"
+    }
+  ],
+  "observations": [
+    {
+      "id": "demo:observation:2",
+      "kind": "user_reports_forgotten",
+      "message_id": "demo:message:2",
+      "quote": "격리 수준은 배웠는데 기억이 안 나요.",
+      "assistance": "unknown",
+      "concepts": [
+        {"id": "demo:binding:2", "concept_id": "demo-db:isolation", "binding": "explicit"}
+      ]
+    }
+  ]
+}

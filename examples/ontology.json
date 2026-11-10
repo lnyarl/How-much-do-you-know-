@@ -1,0 +1,42 @@
+{
+  "producer_id": "demo",
+  "request_id": "demo-ontology-1",
+  "sources": [
+    {"id": "demo:source", "namespace": "demo-db", "title": "데모용 개념 자료"}
+  ],
+  "versions": [
+    {
+      "id": "demo:source:v1",
+      "source_id": "demo:source",
+      "content": "트랜잭션은 여러 작업을 묶는 개념이다. 격리 수준은 트랜잭션과 관련된 개념이다."
+    }
+  ],
+  "concepts": [
+    {"id": "demo-db:transaction", "namespace": "demo-db", "kind": "concept", "label": "트랜잭션"},
+    {"id": "demo-db:isolation", "namespace": "demo-db", "kind": "concept", "label": "격리 수준"}
+  ],
+  "concept_sources": [
+    {
+      "id": "demo:source-link:transaction",
+      "concept_id": "demo-db:transaction",
+      "source_version_id": "demo:source:v1",
+      "quote": "트랜잭션은 여러 작업을 묶는 개념이다. 격리 수준은 트랜잭션과 관련된 개념이다."
+    },
+    {
+      "id": "demo:source-link:isolation",
+      "concept_id": "demo-db:isolation",
+      "source_version_id": "demo:source:v1",
+      "quote": "트랜잭션은 여러 작업을 묶는 개념이다. 격리 수준은 트랜잭션과 관련된 개념이다."
+    }
+  ],
+  "relations": [
+    {
+      "id": "demo:relation",
+      "subject_id": "demo-db:isolation",
+      "type_id": "related_to",
+      "object_id": "demo-db:transaction",
+      "source_version_id": "demo:source:v1",
+      "quote": "트랜잭션은 여러 작업을 묶는 개념이다. 격리 수준은 트랜잭션과 관련된 개념이다."
+    }
+  ]
+}

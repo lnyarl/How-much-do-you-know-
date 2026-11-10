@@ -1,0 +1,27 @@
+{
+  "producer_id": "demo",
+  "request_id": "demo-feedback-1",
+  "session_id": "demo:session",
+  "external_session_id": "demo-conversation",
+  "messages": [
+    {
+      "id": "demo:message:1",
+      "external_message_id": "demo-turn-1",
+      "role": "user",
+      "content": "트랜잭션은 여러 쿼리를 하나로 묶는 거라고 알고 있어요.",
+      "observed_at": "2026-11-10T05:00:00Z"
+    }
+  ],
+  "observations": [
+    {
+      "id": "demo:observation:1",
+      "kind": "user_explanation",
+      "message_id": "demo:message:1",
+      "quote": "트랜잭션은 여러 쿼리를 하나로 묶는 거라고 알고 있어요.",
+      "assistance": "unknown",
+      "concepts": [
+        {"id": "demo:binding:1", "concept_id": "demo-db:transaction", "binding": "explicit"}
+      ]
+    }
+  ]
+}
